@@ -1,6 +1,5 @@
-const functionName = process.argv[2]
-const fs = require('fs')
+const writeFile = require('./writeFile')
 
-fs.writeFileSync(`./${functionName}.js`, `function ${functionName}(){}`)
-console.log(`function ${functionName}() {}
-`)
+const functionName = process.argv[2] ?? 'myFunction'
+
+writeFile(functionName)
