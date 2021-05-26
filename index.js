@@ -73,7 +73,11 @@ inquirer.prompt(questions).then(answers => {
 
   namesArr.forEach(name => {
     filesArr.forEach(file => {
-      writeFile(name, template[file].fileType, template[file].fileString(name))
+      writeFile(
+        name.replace(/^./, name[0].toUpperCase()),
+        template[file].fileType,
+        template[file].fileString(name.replace(/^./, name[0].toUpperCase()))
+      )
     })
   })
 })
