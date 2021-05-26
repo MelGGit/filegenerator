@@ -74,7 +74,7 @@ inquirer.prompt(questions).then(answers => {
   namesArr.forEach(name => {
     filesArr.forEach(file => {
       writeFile(
-        name.replace(/^./, name[0].toUpperCase()),
+        name.replace(/^./, name[0].toUpperCase()), // ersten Buchstabe groß schreiben
         template[file].fileType,
         template[file].fileString(name.replace(/^./, name[0].toUpperCase()))
       )
