@@ -1,3 +1,4 @@
 # File generator
 
-This is a demo for a simple CLI tool.
+This is a node tool, that creates boilerplate files for react components, stories und spec.
+Use `$ filegenerator`
